@@ -3,6 +3,8 @@ import { config } from './config.js';
 const ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models';
 
 async function callGemini(parts) {
+    const startedAt = Date.now();
+  console.log('[Gemini] Request started');
   if (!config.geminiKey) throw new Error('GEMINI_API_KEY is not set on the server.');
   const url = `${ENDPOINT}/${config.geminiModel}:generateContent`;
   let lastError = 'Gemini request failed.';
@@ -31,6 +33,7 @@ async function callGemini(parts) {
     if (res.status !== 429 && res.status < 500) break;
     await new Promise((r) => setTimeout(r, 1500));
   }
+    console.error(`[Gemini] Failed after ${Date.now() - startedAt}ms: ${lastError}`);
   throw new Error(lastError);
 }
 

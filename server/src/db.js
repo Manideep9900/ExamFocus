@@ -8,13 +8,13 @@ throw new Error('DATABASE_URL is missing from server/.env');
 }
 
 export const db = new Pool({
-connectionString: process.env.DATABASE_URL,
-ssl: {
-rejectUnauthorized: false,
-},
-max: 5,
-connectionTimeoutMillis: 10000,
-idleTimeoutMillis: 30000,
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: true,
+  },
+  max: 5,
+  connectionTimeoutMillis: 10000,
+  idleTimeoutMillis: 30000,
 });
 
 export async function initDb() {

@@ -39,6 +39,17 @@ Students often spend considerable time reviewing previous question papers withou
 
 The goal is to help students make better use of their preparation time by understanding patterns in previous examination papers.
 
+## Screenshots
+
+# Homepage
+
+<img width="1517" height="718" alt="Screenshot 2026-10-19 002311" src="https://github.com/user-attachments/assets/7c18f327-c3fc-4c1d-961b-d29ffdceaad0" />
+
+## Dashboard 
+
+<img width="1512" height="727" alt="Screenshot 2026-10-19 175103" src="https://github.com/user-attachments/assets/7e186034-cee4-4da7-895c-158eedf7cfab" />
+<img width="1520" height="730" alt="Screenshot 2026-10-19 175151" src="https://github.com/user-attachments/assets/a97d66f2-03db-4340-9793-02012d02fd6d" />
+
 ## Features
 
 - **AI-Powered Paper Analysis** — Analyze uploaded question papers using the Google Gemini API.
